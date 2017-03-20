@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 	FILE *gp = popen("gnuplot -persist\n", "w");
 	fprintf(gp, "set xlabel \"x\"\n");
 	fprintf(gp, "set ylabel \"y\"\n");
-	fprintf(gp, "plot '-' with points lw 2, '-' with lines lw 2\n");
+	fprintf(gp, "plot '-' with points lt 7, '-' with lines lw 2\n");
 	for(size_t i=0;i<sx.size();i++) fprintf(gp, "%f\t%f\n", sx[i], sy[i]); fprintf(gp,"e\n");
 	for(size_t i=0;i<rx.size();i++) fprintf(gp, "%f\t%f\n", rx[i], ry[i]); fprintf(gp,"e\n");
 	fprintf(gp, "exit\n");
